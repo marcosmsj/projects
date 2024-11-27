@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    justify-content: space-between;
+
+}
+
+.container .card {
+    position: relative;
+    border-radius: 10px;    
+}
+
+.container .card .front-side {
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 300px;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+    transition: 0.5s;
+    z-index: 1;
+
+}
+
+.container .card:hover .front-side {
+    background: #ff0057;
+    transform: translateY(0px);    
+}
+
+.container .card .front-side .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .front-side .content {
+    opacity: 1;    
+}
+
+.container .card .social-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ff0057;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.container .card:nth-child(1) .social-icon {
+    background-color: #e07768;
+}
+
+.container .card:nth-child(2) .social-icon {
+    background-color: #6eadd4;
+}
+
+.container .card:nth-child(3) .social-icon {
+    background-color: #4aada9;
+}
+
+.container .card .social-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #f1f1f1;
+    font-size: 80px;
+    transform: translate(-50%, -50%);
+    transition: 0.7s;
+}
+
+.container .card .back-side {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    height: 200px;
+    width: 300px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    transition: 0.5s;
+}
+
+.container .card:hover .back-side {
+    transform: translateY(0);
+}
+
+.container .card .back-side .content p {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    color: #414141;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.container .card .back-side .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0px;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+}
+
+.container a {
+    text-decoration: none;
+    color: #414141;
+}
